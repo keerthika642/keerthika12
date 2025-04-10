@@ -1,0 +1,109 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align top */
+    min-height: 100vh;
+    padding-top: 50px; /* Add some space at the top */
+    margin: 0;
+}
+
+.todo-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px; /* Space between input and button */
+    margin-bottom: 20px;
+}
+
+#newTaskInput {
+    flex-grow: 1; /* Take available space */
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#newTaskInput:focus {
+     outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+#addTaskBtn {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+#addTaskBtn:hover {
+    background-color: #357abd;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#taskList li {
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between; /* Push text and button apart */
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+#taskList li:hover {
+    background-color: #f1f1f1;
+}
+
+#taskList li span {
+    flex-grow: 1; /* Allow text to take available space */
+    margin-right: 10px; /* Space between text and button */
+    cursor: pointer; /* Indicate possibility of interaction (like marking done) */
+}
+
+#taskList li.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
